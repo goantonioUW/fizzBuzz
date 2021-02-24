@@ -7,25 +7,25 @@ function fizzBuzz1( value1, value2) {
     for(let i = 1; i <= 100; i++){
 
         //each time this code loops around we will check to see if it it divisible by 3 and 5 using the modulo operation % 
-        if (i % value1 == 0 && i%value2 == 0){
+        if (i % value1 == 0 && i % value2 == 0){
 
             //This is returning the string FizzBuzz when the value is both divisible by 3 and 5
-            returnValue += "FizzBuzz ";
+            returnValue += "FizzBuzz, ";
         }
 
         //if the value is divisible by 3 then print Fizz
         else if (i % value1 == 0){
-            returValue =+ "Fizz ";
+            returnValue += "Fizz, ";
         }
     
         //if the value is divisible by 5 then print Buzz
         else if (i % value2 == 0) {
-            returnValue += "Buzz "
+            returnValue += "Buzz, "
         }
 
         //If the value is not divisible by 3 or 5 then print the number. after each return adding a space after the fizz buzz or the number will keep the numbers seperate
         else {
-            returnValue += i + " ";
+            returnValue += i + ", ";
         }
     }
     return returnValue;
@@ -43,4 +43,8 @@ function buzzer(){
 
     //Now we are setting the output to call our fizzBuzz1 function and insert the new values that the user picked.
     output = fizzBuzz1(val1, val2);
+
+    //Now we have to add the results to the page. going back to the document and getting the elementID that we want to use to display the results and adding the output to that element. 
+    document.getElementById("results").innerHTML = output;
+    console.log(val1)
 }
