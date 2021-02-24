@@ -30,3 +30,17 @@ function fizzBuzz1( value1, value2) {
     }
     return returnValue;
 }
+
+//This is a function to call and use our fizzBuzz function
+function buzzer(){
+
+    //we are creating an output variable to handle the string 
+    let output="";
+
+    //we are setting val1 and val2 to whatever the user chooses by going to the document getting the elementID and that value attached to it
+    let val1 = document.getElementById("fizzValue").value;
+    let val2 = document.getElementById("buzzValue").value;
+
+    //Now we are setting the output to call our fizzBuzz1 function and insert the new values that the user picked.
+    output = fizzBuzz1(val1, val2);
+}
